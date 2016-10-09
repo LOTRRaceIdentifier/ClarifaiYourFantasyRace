@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hall Council 2016</title>
+  <title>Face Your LOTR</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,64 +10,30 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-
-<style type="text/css">
-	.parallaxParent {
-		height: 100vh;
-		overflow: hidden;
-	}
-	.parallaxParent > * {
-		height: 200%;
-		position: relative;
-		top: -100%;
-	}
-</style>
-
 <body>
-<div class="spacer s0"></div>
-<div id="parallax1" class="parallaxParent">
-	<div style="background-image: url(../../img/example_parallax_bg1.png);"></div>
-</div>
-<div class="spacer s1">
-	<div class="box2 blue">
-		<p>Content 1</p>
-		<a href="#" class="viewsource">view source</a>
+
+<div class="parallax">
+	<div class="parallax__group" style="background-color: pink;">
+		<div class="parallax__layer parallax_layer--back">
+			<div class="background">Background layer</div>
+		</div>
+		<div class="parallax__layer parallax__layer--base">
+			<div class="background">Base</div>
+		</div>
+	</div>
+
+	<div class="parallax__group" style="background-color: lilac;">
+		<div class="parallax__layer parallax_layer--back">
+			<div class="background">Background layer 2</div>
+		</div>
+		<div class="parallax__layer parallax__layer--base">
+			<div class="background">Base 2</div>
+		</div>
 	</div>
 </div>
-<div class="spacer s0"></div>
-<div id="parallax2" class="parallaxParent">
-	<div style="background-image: url(../../img/example_parallax_bg2.png);"></div>
-</div>
-<div class="spacer s1">
-	<div class="box2 blue">
-		<p>Content 2</p>
-		<a href="#" class="viewsource">view source</a>
-	</div>
-</div>
-<div class="spacer s0"></div>
-<div id="parallax3" class="parallaxParent">
-	<div style="background-image: url(../../img/example_parallax_bg3.png);"></div>
-</div>
-<div class="spacer s2"></div>
+
+
+
+
 </body>
-
-<script>
-	// init controller
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#parallax1"})
-					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
-
-	new ScrollMagic.Scene({triggerElement: "#parallax2"})
-					.setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
-
-	new ScrollMagic.Scene({triggerElement: "#parallax3"})
-					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
-</script>
+</html>
