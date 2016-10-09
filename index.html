@@ -10,27 +10,113 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() < 50) { // check if user scrolled more than 50 from top of the browser window
+          $(".navbar-fixed-top").css("background-color", "transparent"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else if ($(document).scrollTop() > 2200) {
+          $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+        } else {
+        	$(".navbar-fixed-top").css("background-color", "white"); // if not, change it back to transparent
+        }
+      });
+    });
+</script>
+
+
+
+
 <body>
 
-<div class="parallax">
-	<div class="parallax__group" style="background-color: pink;">
-		<div class="parallax__layer parallax_layer--back">
-			<div class="background">Background layer</div>
-		</div>
-		<div class="parallax__layer parallax__layer--base">
-			<div class="background">Base</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>           
+      				</button>
+				<a class="navbar-brand">Clarifai LOTR</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="myNavbar" href="#">Home</a></li>
+  						<li><a class="myNavbar" href="#demo">Demo</a></li>
+  					</ul>
+  				</div>
+  			</div>
+		</nav>
+
+	<div class="parallax-1">
+		<div class="caption">
+			<span class="border">Clarifai Your Fantasy Race</span>
 		</div>
 	</div>
 
-	<div class="parallax__group" style="background-color: lilac;">
-		<div class="parallax__layer parallax_layer--back">
-			<div class="background">Background layer 2</div>
+
+	<div class="textBody" style="height: 100vh;">
+		<br>
+		<div class="col-sm-4">
+			<h1 style="text-align: center;"></h1>
 		</div>
-		<div class="parallax__layer parallax__layer--base">
-			<div class="background">Base 2</div>
+		<div class="col-sm-8">
+			<br><br><br><br><br>
+			<h1 style="text-align: center;">Of all the free peoples of Middle Earth...<br><br>
+			To which race do you belong?<br><br><br><br><br><br><br>
+			Are you a...
+			</h1>
+		</div>
+		<br>
+	</div>
+
+
+	<div class="parallax-2">
+		<br><br><br><br>
+		<div class="col-sm-3">
+			<div class="caption2 border2">Hobbit</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="caption2 border2">Elf</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="caption2 border2">Dwarf</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="caption2 border2">Man</div>
 		</div>
 	</div>
-</div>
+
+
+
+
+	<div style="height: 70vh;">
+		<div class="col-sm-12">
+			<br><br><br><br><br>
+			<h1 style="text-align: center;">
+				Or something else?
+			</h1>
+			<br><br><br><br><br>
+			<h2 style="text-align: center;">Check out the demo below and then try it yourself!</h2>
+		</div>
+	</div>
+
+
+	<div class="text" id="demo" style="height: 100vh;">
+		<video autoplay poster="Tree.jpg" id="videobg" loop>
+		<source src="vid/meme.webm" type="video/webm">
+		<source src="vid/meme.mp4" type="video/mp4">
+Your browser does not support the video tag. I suggest you upgrade your browser.
+		</video>	
+	</div>
+
+<br><br><br>
+<footer class="container-fluid text-center" style="background-color: rgb(210, 210, 210);">
+  <br>
+  <p style="font-size: 12px;">Copyright pending 2016.<br>Made with love by Ciarra Peters and Manas Purohit</p>
+</footer>
 
 
 
