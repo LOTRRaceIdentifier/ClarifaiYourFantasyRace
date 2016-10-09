@@ -103,5 +103,9 @@ background-size: cover;
 transition: 1s opacity;
 }
 
+h1 {
+	font-size: 46px;
+}
+
 
 
